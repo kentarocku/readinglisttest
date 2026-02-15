@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虫取りアクションゲーム</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <div class="hud-item">🧒 レベル <span id="level">1</span></div>
+        <div class="hud-item">⭐ スコア <span id="score">0</span></div>
+        <div class="hud-item">🏆 最高 <span id="high-score">0</span></div>
+        <div class="hud-item">⏱️ 残り <span id="time">60</span>s</div>
+      </header>
+
+      <section class="game-area" id="game-area" aria-label="虫取りフィールド">
+        <div class="path path-top"></div>
+        <div class="path path-right"></div>
+        <div class="path path-bottom"></div>
+        <div class="house" aria-hidden="true"></div>
+        <div class="tree tree-1" aria-hidden="true"></div>
+        <div class="tree tree-2" aria-hidden="true"></div>
+        <div class="tree tree-3" aria-hidden="true"></div>
+        <div id="player" class="player" aria-label="プレイヤー">🧒</div>
+      </section>
+
+      <section class="controls">
+        <p>矢印キー / WASD で移動、スペースキーかボタンで虫をキャッチ！</p>
+        <button id="catch-button" class="catch-button" type="button">とる！</button>
+        <button id="restart-button" class="restart-button" type="button">もう一度あそぶ</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
